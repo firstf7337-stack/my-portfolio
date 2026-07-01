@@ -22,7 +22,7 @@
         /* ส่วนหัว (Hero) */
         .hero {
             text-align: center;
-            padding: 80px 20px 60px;
+            padding: 70px 20px 60px;
             background: linear-gradient(135deg, #4A63E7, #6C8DFF);
             color: #fff;
             border-radius: 0 0 40px 40px;
@@ -30,18 +30,20 @@
         }
 
         .avatar {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            background: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin: 0 auto 24px;
-            font-size: 3rem;
-            font-weight: 700;
-            color: #4A63E7;
-            border: 4px solid rgba(255,255,255,0.6);
+            border: 4px solid #fff;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .hero h1 {
@@ -117,27 +119,36 @@
             font-weight: 500;
         }
 
-        /* ติดต่อ */
-        .contact-links {
-            display: flex;
-            flex-direction: column;
+        /* ปุ่มติดต่อ */
+        .contact-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 12px;
         }
 
-        .contact-links a {
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             text-decoration: none;
-            color: #2b2b3d;
-            background: #f7f8fc;
-            padding: 14px 18px;
+            color: #fff;
+            padding: 14px 12px;
             border-radius: 12px;
-            font-size: 0.95rem;
-            transition: background 0.2s ease, transform 0.2s ease;
+            font-size: 0.92rem;
+            font-weight: 500;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
 
-        .contact-links a:hover {
-            background: #eef1ff;
-            transform: translateX(4px);
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.15);
         }
+
+        .btn-email { background: #4A63E7; }
+        .btn-github { background: #24292e; }
+        .btn-facebook { background: #1877F2; }
+        .btn-line { background: #06C755; }
 
         footer {
             text-align: center;
@@ -147,11 +158,12 @@
         }
 
         @media (max-width: 480px) {
-            .hero { padding: 60px 16px 50px; }
-            .hero h1 { font-size: 1.5rem; }
+            .hero { padding: 50px 16px 50px; }
+            .hero h1 { font-size: 1.4rem; }
             .card { padding: 24px 20px; }
             .info-row { flex-direction: column; gap: 4px; }
             .info-row .label { width: auto; }
+            .contact-buttons { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -159,7 +171,9 @@
 
     <!-- ส่วนหัว -->
     <div class="hero">
-        <div class="avatar">ฟ</div>
+        <div class="avatar">
+            <img src="profile.jpg" alt="รูปโปรไฟล์">
+        </div>
         <h1>สวัสดีครับ ยินดีต้อนรับสู่เว็บไซต์ Portfolio</h1>
         <p class="nickname">วิริทธิ์พล พิบูลย์ (เฟิร์ส)</p>
     </div>
@@ -205,9 +219,11 @@
         <!-- ติดต่อ -->
         <div class="card">
             <h2>📩 ติดต่อฉัน</h2>
-            <div class="contact-links">
-                <a href="mailto:example@email.com">📧 example@email.com</a>
-                <a href="https://github.com/" target="_blank">💻 github.com/ชื่อผู้ใช้ของฉัน</a>
+            <div class="contact-buttons">
+                <a href="mailto:example@email.com" class="contact-btn btn-email">📧 อีเมล</a>
+                <a href="https://github.com/" target="_blank" class="contact-btn btn-github">💻 GitHub</a>
+                <a href="https://facebook.com/" target="_blank" class="contact-btn btn-facebook">📘 Facebook</a>
+                <a href="https://line.me/" target="_blank" class="contact-btn btn-line">💬 Line</a>
             </div>
         </div>
 
