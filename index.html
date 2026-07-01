@@ -1,12 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - วิริทธิ์พล พิบูลย์</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+            color: #2b2b3d;
+            line-height: 1.7;
+        }
+
+        /* ส่วนหัว (Hero) */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: linear-gradient(135deg, #4A63E7, #6C8DFF);
+            color: #fff;
+            border-radius: 0 0 40px 40px;
+            box-shadow: 0 8px 24px rgba(74, 99, 231, 0.25);
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #4A63E7;
+            border: 4px solid rgba(255,255,255,0.6);
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .hero .nickname {
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* กล่องเนื้อหาทั่วไป */
+        .container {
+            max-width: 700px;
+            margin: -30px auto 0;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #4A63E7;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-row {
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f5;
+            font-size: 0.98rem;
+        }
+
+        .info-row:last-child { border-bottom: none; }
+
+        .info-row .label {
+            width: 130px;
+            color: #8a8a9a;
+            font-weight: 400;
+            flex-shrink: 0;
+        }
+
+        .info-row .value {
+            font-weight: 500;
+        }
+
+        /* ทักษะแบบแท็ก */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #eef1ff;
+            color: #4A63E7;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* ติดต่อ */
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .contact-links a {
+            text-decoration: none;
+            color: #2b2b3d;
+            background: #f7f8fc;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .contact-links a:hover {
+            background: #eef1ff;
+            transform: translateX(4px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px 40px;
+            font-size: 0.85rem;
+            color: #9a9aab;
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding: 60px 16px 50px; }
+            .hero h1 { font-size: 1.5rem; }
+            .card { padding: 24px 20px; }
+            .info-row { flex-direction: column; gap: 4px; }
+            .info-row .label { width: auto; }
+        }
+    </style>
 </head>
 <body>
-    <h1>สวัสดีครับ ยินดีต้อนรับสู่เว็บไซต์Portfolio</h1>
-    <p>ชื่อ-นามสกุล : วิริทธิ์พล พิบูลย์</p>
-    <p>ชื่อเล่น : เฟิร์ส</p>
-    <p>ห้อง : IT.3102</p>
+
+    <!-- ส่วนหัว -->
+    <div class="hero">
+        <div class="avatar">ฟ</div>
+        <h1>สวัสดีครับ ยินดีต้อนรับสู่เว็บไซต์ Portfolio</h1>
+        <p class="nickname">วิริทธิ์พล พิบูลย์ (เฟิร์ส)</p>
+    </div>
+
+    <div class="container">
+
+        <!-- ข้อมูลส่วนตัว -->
+        <div class="card">
+            <h2>👤 ข้อมูลส่วนตัว</h2>
+            <div class="info-row">
+                <span class="label">ชื่อ-นามสกุล</span>
+                <span class="value">วิริทธิ์พล พิบูลย์</span>
+            </div>
+            <div class="info-row">
+                <span class="label">ชื่อเล่น</span>
+                <span class="value">เฟิร์ส</span>
+            </div>
+            <div class="info-row">
+                <span class="label">ห้อง</span>
+                <span class="value">IT.3102</span>
+            </div>
+        </div>
+
+        <!-- เกี่ยวกับฉัน -->
+        <div class="card">
+            <h2>💬 เกี่ยวกับฉัน</h2>
+            <p>สวัสดีครับ ผมชื่อเฟิร์ส เป็นนักศึกษาแผนกเทคโนโลยีสารสนเทศ
+            สนใจเรื่องการเขียนโปรแกรมและการออกแบบเว็บไซต์ ชอบเรียนรู้สิ่งใหม่ๆ
+            และอยากพัฒนาฝีมือของตัวเองให้ดีขึ้นเรื่อยๆ ครับ</p>
+        </div>
+
+        <!-- ทักษะ -->
+        <div class="card">
+            <h2>🛠️ ทักษะ</h2>
+            <div class="skills">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">การออกแบบเว็บไซต์</span>
+                <span class="skill-tag">การทำงานเป็นทีม</span>
+            </div>
+        </div>
+
+        <!-- ติดต่อ -->
+        <div class="card">
+            <h2>📩 ติดต่อฉัน</h2>
+            <div class="contact-links">
+                <a href="mailto:example@email.com">📧 example@email.com</a>
+                <a href="https://github.com/" target="_blank">💻 github.com/ชื่อผู้ใช้ของฉัน</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 วิริทธิ์พล พิบูลย์ (เฟิร์ส) — IT.3102
+    </footer>
+
 </body>
 </html>
